@@ -1,3 +1,13 @@
+/// Copyright Vr3lab 2021
+/// Changelog:
+//  
+// 2021 Michele Fiorentino - added comments and tips (still needs cleanups)
+
+/// <summary>Unity 3D Class  for moving a Standard cam using mouse 
+/// Generally used for initial students claseses
+/// plane.</summary>
+///
+
 using UnityEngine;
 using System.Collections;
 

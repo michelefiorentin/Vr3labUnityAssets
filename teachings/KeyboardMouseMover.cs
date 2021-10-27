@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 /// Copyright Vr3lab 2021
-// 2021 Enrico Laviola
-// 2021 Michele Fiorentino - added commensta and tips
+/// Changelog:
+// 2021 Enrico Laviola -start 
+// 2021 Michele Fiorentino - added comments and tips (still needs cleanups)
 
 /// <summary>Unity 3D Class  for moving a Object using standard axes an mouse 
 /// Generally used for initial students claseses
