@@ -1,3 +1,14 @@
+/// <summary>
+/// Translation and rotation the attached object 
+/// 
+///
+/// Authors
+/// 7-9-2021 - script by michele Fiorentino, Vr3lab, Politecnico di Bari
+/// 
+/// Todo
+/// unificate with the Autoroll
+/// </summary>
+
 using System;
 using UnityEngine;
 
