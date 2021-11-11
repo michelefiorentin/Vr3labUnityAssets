@@ -18,7 +18,6 @@ namespace UnityStandardAssets.Utility
             Enable = 3,     // Enable a component
             Animate = 4,    // Start animation on target
             Deactivate = 5,  // Decativate target GameObject
-            Event = 6  // Decativate target GameObject
         }
 
       
@@ -86,12 +85,7 @@ namespace UnityStandardAssets.Utility
                             targetGameObject.SetActive(false);
                         }
                         break;
-                    case Mode.Event:
-                        if (yourCustomEvent != null)
-                        {
-                            yourCustomEvent.Invoke();
-                        }
-                        break;
+
                 }
             }
         }
@@ -100,6 +94,10 @@ namespace UnityStandardAssets.Utility
         private void OnTriggerEnter(Collider other)
         {
             DoActivateTrigger();
+			if (yourCustomEvent != null)
+                        {
+                            yourCustomEvent.Invoke();
+                        }
         }
     }
 }
