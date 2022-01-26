@@ -1,8 +1,12 @@
-﻿/* 
+﻿/*
+ * IMPORTANT NOTE: uses legacy input system
 Copyright Michele Fiorentino 2021 - Politecnico di Bari
-michele.fiorentino@poliba.it
+Brief: This is a signle script for avoiding student to program.
+Enjoy! MIT license
+Usage: attach to the object you want to move and set keys and setps
+*/
 
- */
+
 /// <summary>
 /// Copyright 2021 Michele Fiorentino  - Politecnico di Bari
 /// Attach to object and it can be moved accoding arrow keypress

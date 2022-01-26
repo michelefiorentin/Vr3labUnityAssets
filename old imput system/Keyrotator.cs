@@ -1,7 +1,15 @@
 ﻿/* 
+IMPORTANT NOTE: uses legacy input system
 Copyright Michele Fiorentino 2021 - Politecnico di Bari
-michele.fiorentino@poliba.it
-
+Brief: This is a signle script for avoiding student to program.
+Enjoy! MIT license
+Usage: 
+1) add to the object to move 
+2) set keys
+3) set axis of rotation (workd space)
+4) set step increment
+5) (optional) drag an instance to texpro for value update
+6) enjoy
  */
 /// <summary>
 /// Copyright 2021 Michele Fiorentino  - Politecnico di Bari
@@ -22,9 +30,9 @@ public class Keyrotator : MonoBehaviour
     private float myValue;
 
     [Tooltip("Key1 addition")]
-    public string keyname1 = "a";
+    public string plus_key = "d";
     [Tooltip("Key2 subtraction")]
-    public string keyname2 = "s";
+    public string minus_key = "f";
     [Tooltip("Axis of rotation")]
     public Vector3 myaxis = new Vector3(1, 0, 0);
     [Tooltip("value of rotation per keypress")]
@@ -46,13 +54,13 @@ public class Keyrotator : MonoBehaviour
 
     private void Update()
     { 
-        if (Input.GetKeyDown(keyname1))
+        if (Input.GetKeyDown(plus_key))
         {
    
             myangleupdate(step);
         }
         else
-        if (Input.GetKeyDown(keyname2))
+        if (Input.GetKeyDown(minus_key))
         {
 
             myangleupdate(-step);

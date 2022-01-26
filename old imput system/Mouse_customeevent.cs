@@ -1,19 +1,17 @@
 /*
+ * IMPORTANT NOTE: uses legacy input system
 Copyright Michele Fiorentino 2021 - Politecnico di Bari
 Brief: This is a signle script for avoiding student to program.
-Enjoy! MIT license
-V2: soved bug cliks everwere
-V3: added other events
+/// USAGE 
+// 1) add script to an object with collider 
+// 2) choose mouse related customeevent 
+// enjoy
+
 */
 using System;
 using UnityEngine;
 using UnityEngine.Events;
-/// <summary>
-/// Copyright 2021 Michele Fiorentino  - Politecnico di Bari
-/// Custom event on click
-/// Attach the script to GameObject having collider too set up custom events on mouse click
-/// NOTE: mandatory a collider component
-/// </summary>
+
 
 
 [RequireComponent(typeof(Collider))]

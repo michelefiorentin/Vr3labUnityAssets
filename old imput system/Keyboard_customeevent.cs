@@ -1,7 +1,9 @@
 /*
+ * IMPORTANT NOTE: uses legacy input system
 Copyright Michele Fiorentino 2021 - Politecnico di Bari
 Brief: This is a signle script for avoiding student to program.
 Enjoy! MIT license
+Usage: set Keyname and custom events
 */
 using System;
 using UnityEngine;

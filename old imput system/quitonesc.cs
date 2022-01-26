@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+ * IMPORTANT NOTE: uses legacy input system
+Copyright Michele Fiorentino 2021 - Politecnico di Bari
+Brief: This is a signle script for avoiding student to program.
+Enjoy! MIT license
+Usage: Close application when user press esc (not default behavious)
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

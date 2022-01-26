@@ -1,7 +1,13 @@
 /*
+IMPORTANT NOTE: uses legacy input system
 Copyright Michele Fiorentino 2021 - Politecnico di Bari
 Brief: This is a signle script for avoiding student to program.
 Enjoy! MIT license
+Usage: 
+1) create target scene give an easyname (no spaces)
+2) add target scene to Build settings
+3) set key and the name of the scene (avoid spaces)
+4) enjoy
 */
 using System;
 using UnityEngine;
