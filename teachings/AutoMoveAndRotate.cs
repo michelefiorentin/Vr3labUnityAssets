@@ -12,8 +12,7 @@
 using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.Utility
-{
+
     public class AutoMoveAndRotate : MonoBehaviour
     {
         public Vector3andSpace moveUnitsPerSecond;
@@ -49,4 +48,3 @@ namespace UnityStandardAssets.Utility
             public Space space = Space.Self;
         }
     }
-}
