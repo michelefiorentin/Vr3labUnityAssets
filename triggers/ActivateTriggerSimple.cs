@@ -7,6 +7,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Collider))]
 public class ActivateTriggerSimple : MonoBehaviour
@@ -25,7 +26,7 @@ public class ActivateTriggerSimple : MonoBehaviour
             yourCustomEvent.Invoke();
             //Debug.Log("custome event invoked");
         }
-        if (!string.Empty(SceneName))
+        if (!string.IsNullOrEmpty(SceneName))
         {
             SceneManager.LoadScene(SceneName);
         }
