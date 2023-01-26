@@ -3,7 +3,8 @@
 /// Instructions:
 /// 1) add to gameobject with collider
 /// 2) set collider as Trigger (e.g. Boxcollider)
-/// 3) add yourCustomEvent\s it will be triggered on enter
+/// 3) set Conditions ( OnEnter, stay, exit)
+/// 4) add yourCustomEvent\s it will be triggered on enter
 
 /// By Michele Fiorentino
 /// Politecnico di Bari
