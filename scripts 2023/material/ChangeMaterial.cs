@@ -15,25 +15,32 @@ using UnityEngine.SceneManagement;
 // by Michele Fiorentino
 // 14-3-2017
 // 28-12-2022 cleanup an dimprove
+// 7/6/23 add material index
 // usage:
 // 1) Create \find materials and add to Array
 // 2) Add OBjects
-// 3) set buttons
+// 3) set buttons -call cycleMaterials 
 // enjoy!
 
 public class ChangeMaterial : MonoBehaviour
 {
-    [Tooltip("Button tio be pressed to cycle material - fefault space")]
-    public string buttonName ="space";
+
+
 
     [Tooltip("Set materials to cycle")]
-    public List<Material> materialsList;
+    public List<Material> inputMaterials;
 
     [Tooltip("Set Objects to apply materials")]
-    public List<GameObject> changecolorOjectsList;
-    [SerializeField]
-    private int index = 0;
+    public List<GameObject> TargetObjectsToBeChanged;
     
+    [Tooltip("material index in the objects to be changed")]
+    public int targetMaterialindex = 0;
+
+    [Tooltip("Button tio be pressed to cycle material - fefault space")]
+    public bool keyinputactivated = false;
+
+    [Tooltip("(check flag) Button tio be pressed to cycle material - fefault space")]
+    public string buttonName = "space";
 
     void Start()
     {
@@ -42,10 +49,10 @@ public class ChangeMaterial : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(buttonName))
+        if (keyinputactivated && Input.GetKeyDown(buttonName))
         {
             Debug.Log(buttonName+"Pressed!");
-            if (materialsList.Count > 0 && changecolorOjectsList.Count > 0)
+            if (inputMaterials.Count > 0 && TargetObjectsToBeChanged.Count > 0)
                 cycleMaterials();
             else Debug.LogWarning("WARNING: no objects or material in list!" );
         }
@@ -56,15 +63,16 @@ public class ChangeMaterial : MonoBehaviour
     {
         // for each material 
  
-            foreach (GameObject myobject in changecolorOjectsList) //the line the error is pointing to
+            foreach (GameObject myobject in TargetObjectsToBeChanged) //the line the error is pointing to
             {
+                // renderer is local as it is applied to multiple game objects
                 Renderer myrend = myobject.GetComponent<Renderer>();
                 //if (allmarterialInstances ==true) myrend.sharedMaterial = mymaterials[index];
-                myrend.material = materialsList[index];
+                myrend.material = inputMaterials[targetMaterialindex];
             }
         // increment  index
-        index = index + 1;
-        if (index >= materialsList.Count) index = 0;
+        targetMaterialindex = targetMaterialindex + 1;
+        if (targetMaterialindex >= inputMaterials.Count) targetMaterialindex = 0;
 
            
         //Debug.Log("material changed");
