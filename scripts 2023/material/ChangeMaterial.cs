@@ -1,6 +1,6 @@
 ﻿/// By Michele Fiorentino
 /// Politecnico di Bari
-/// Copyright 2022
+/// Copyright 2022-23
 /// In case of issues or bugs email fiorentino@poliba.it - give details
 
 using System.Collections;
@@ -16,23 +16,24 @@ using UnityEngine.SceneManagement;
 // 14-3-2017
 // 28-12-2022 cleanup an dimprove
 // 7/6/23 add material index
+// 30-10-23 imporved instructions
+// Warning:  keyboard funtionality using old legacy input system ( it may not work with new avatar) the cycle fuction will still work
+//
 // usage:
-// 1) Create \find materials and add to Array
-// 2) Add OBjects
-// 3) set buttons -call cycleMaterials 
+// 1) Drag object sto be changed in TargetObjectsToBeChanged list
+// 2) add  materials in inputMaterials list
+// 3) call cycleMaterials public fucntion  
+// 4) (alternative legacy input system) ause to check on keyinputactivated (Default press  space)
 // enjoy!
 
 public class ChangeMaterial : MonoBehaviour
 {
-
-
-
-    [Tooltip("Set materials to cycle")]
-    public List<Material> inputMaterials;
-
     [Tooltip("Set Objects to apply materials")]
     public List<GameObject> TargetObjectsToBeChanged;
-    
+
+    [Tooltip("Set materials to cycle")]
+    public List<Material> inputMaterials; 
+
     [Tooltip("material index in the objects to be changed")]
     public int targetMaterialindex = 0;
 
@@ -52,8 +53,11 @@ public class ChangeMaterial : MonoBehaviour
         if (keyinputactivated && Input.GetKeyDown(buttonName))
         {
             Debug.Log(buttonName+"Pressed!");
+            // if (inputMaterials.Count > 0 && TargetObjectsToBeChanged.Count > 0)
             if (inputMaterials.Count > 0 && TargetObjectsToBeChanged.Count > 0)
+            { 
                 cycleMaterials();
+            }
             else Debug.LogWarning("WARNING: no objects or material in list!" );
         }
     }
