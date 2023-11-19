@@ -11,6 +11,7 @@ Usage: attach to the object you want to move and set keys and setps
 /// Copyright 2021 Michele Fiorentino  - Politecnico di Bari
 /// Attach to object and it can be moved accoding arrow keypress
 /// 1-11-2021 includes part of the code Keyrotator from class 2020, improved with all configurable keys so you can do multipel instances
+/// 19/11/2023 shiwched default x axis commands
 /// </summary>
 
 using System.Collections;
@@ -28,9 +29,9 @@ public class simplekeyboardmover : MonoBehaviour
     public float movingstep = 1.0f;
 
     [Tooltip("Key1 increae X")]
-    public string keyXPlus = "left";
+    public string keyXPlus = "right";
     [Tooltip("Key2 decrease  X")]
-    public string keyXMinus = "right";
+    public string keyXMinus = "left";
 
     [Tooltip("Key1 increae Y")]
     public string keyYPlus = "a";
