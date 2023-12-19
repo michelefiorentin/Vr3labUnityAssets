@@ -4,7 +4,8 @@ Copyright Michele Fiorentino 2021 - Politecnico di Bari
 Brief: This is a signle script for avoiding student to program.
 /// USAGE 
 // 1) add script to an object with collider 
-// 2) choose mouse related customeevent 
+// 2) add/drag used Camera on camera
+// 3) choose mouse related customeevent 
 // enjoy
 
 */
